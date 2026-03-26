@@ -93,23 +93,23 @@ export function About() {
 
                 {/* Leadership Team Section */}
                 <div>
-                    <h3>Leadership Team</h3>
-                    <div>
+                    <h3 className='text-3xl text-[#5B4D3F] mb-8 text-center'>Leadership Team</h3>
+                    <div className = 'grid sm:grid-cols-2 lg:grid-cols-4 gap-8'>
                         {[
-                            { name: 'Alexis Sommerville', role: 'Founder & Director'},
-                            { name: 'Ella', role: '', image: ''},
-                            { name: 'Lizzy', role: '', image: ''},
-                            { name: 'Eunice', role: '', image: ''}
+                            { name: 'Alexis Sommerville', role: 'Founder & Team Member'},
+                            { name: 'Ella', role: 'Team Member', image: ''},
+                            { name: 'Lizzy', role: 'Team Member', image: ''},
+                            { name: 'Eunice', role: 'Team Member', image: ''}
                         ].map((leader, index) => (
-                            <div key={index} className=''>
+                            <div key={index} className='bg-white/70 backdrop-blur rounded-[2rem] overflow-hidden shadow-md hover:shadow-lg transition-shadow'>
                                 <img
                                     src={leader.image}
                                     alt={leader.name}
-                                    className=''
+                                    className='w-full h-64 object-cover'
                                 />
-                                <div>
-                                    <h4>{leader.name}</h4>
-                                    <p>{leader.role}</p>
+                                <div className='p-6 text-center'>
+                                    <h4 className='text-xl text-[#5B4D3F] mb-1'>{leader.name}</h4>
+                                    <p className='text-sm text-[#9D7B6B]'>{leader.role}</p>
                                 </div>
                             </div>
                         ))}

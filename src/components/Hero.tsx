@@ -62,7 +62,7 @@ export function Hero() {
                     </div>
                     <div id='right-content' className='order-1 lg:order-2'>
                         <img
-                            src="images/abounding.png"
+                            src="images/abounding-3.png"
                             alt='young women laughing together'
                             className='w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover rounded-[2rem] shadow-lg'
                         />
