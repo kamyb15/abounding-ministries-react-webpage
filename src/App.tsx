@@ -2,6 +2,7 @@ import { Hero } from './components/Hero';
 import { About} from './components/About';
 import {GirlsNight} from './components/GirlsNight';
 import {Blog} from './components/Blog';
+import {Contact} from './components/Contact';
 
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
             <About />
             <GirlsNight />
             <Blog />
+            <Contact />
         </div>
     );
 }
