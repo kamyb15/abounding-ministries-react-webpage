@@ -1,5 +1,7 @@
 import { Hero } from './components/Hero';
 import { About} from './components/About';
+import {GirlsNight} from './components/GirlsNight';
+import {Blog} from './components/Blog';
 
 
 export default function App() {
@@ -7,6 +9,8 @@ export default function App() {
         <div className='min-h-screen bg-[#FBF8F3]'> {/* minimum height: 100% of viewport height; background-color: #FBF8F3*/}
             <Hero />
             <About />
+            <GirlsNight />
+            <Blog />
         </div>
     );
 }
