@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, Send, Instagram } from 'lucide-react';
+import { Mail, Phone, Send, Instagram, Heart } from 'lucide-react';
 
 export function Contact() {
         const [formData, setFormData] = useState({
@@ -9,7 +9,7 @@ export function Contact() {
             message: ''
         });
 
-        const handleSubmit = (e: React.InputEvent) => {
+        const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
             e.preventDefault();
             alert('Thank you for reaching out! We will get back to you soon.');
             setFormData({name: '', email: '', number: '', message: '',});
@@ -115,7 +115,8 @@ export function Contact() {
 
 
                 {/* Contact Info */}
-                <div className='space-y-8 border-10'>
+                <div className='space-y-8'>
+
                     {/* Social Media, Email, and Phone */}
                     <div className='bg-white/70 backdrop-blur rounded-[2rem] p-8 sm:p-10 shadow-md'>
                         <h3 className='text-2xl text-[#5B4D3F] mb-6'>Connect With Us</h3>
@@ -145,32 +146,45 @@ export function Contact() {
                                 </div>
                             </div>
 
-                            <div>
-                                <div>
-                                    <Phone size={24}/>
+                            <div className='flex items-center gap-4 p-4 bg-[#F5EBE0] rounded-2xl'>
+                                <div className='flex items-center justify-center w-12 h-12 bg-[#DFB8A8] rounded-2xl'>
+                                    <Phone size={24} className="text-white"/>
                                 </div>
                                 <div>
-                                    <p>Call or Text</p>
-                                    <p>(434) 555-0123</p>
+                                    <p className='text-[#5B4D3F]'>Call or Text</p>
+                                    <p className='text-sm text-[#7A6B5D]'>(434) 555-0123</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                 {/* Image */}
-                <div>
+                <div className='rounded-4xl overflow-hidden shadow-lg'>
                     <img
-                    src=''
-                    alt=''
+                    src='images/GatheringBags.png'
+                    alt='GirlsNight Painting Bags'
+                    className='w-full h-75 object-cover'
                     />
                 </div>
+            </div>
+        </div>
 
-                    </div>
-
+        {/* Footer */}
+        <div className='mt-20 pt-8 border-t border-[#9D7B6B]/20 text-center'>
+            <div className='flex items-center justify-center gap-2 mb-4'>
+                <div className= 'w-10 h-10 bg-[#DFB8A8]] rounded-full flex items-center justify-center'>
+                    <Heart size={20} className='text-white' fill='white'/>
                 </div>
-                </div>
-
-            </section>
-
-        );
-};
+                <span className='text-lg text-[#5B4D3F]'>Abounding Ministry</span>
+            </div>
+            <p className='text-[#7A6B5D] text-sm mb-2'>
+                Liberty University • Lynchburg, VA
+            </p>
+            <p className='text-[#9D7B6B]/60 text-xs'>
+                © 2026 Abounding Ministry. All rights reserved.
+            </p>
+        </div>
+    </div>
+</section>
+);
+}
