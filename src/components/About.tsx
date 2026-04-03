@@ -96,10 +96,10 @@ export function About() {
                     <h3 className='text-3xl text-[#5B4D3F] mb-8 text-center'>Leadership Team</h3>
                     <div className = 'grid sm:grid-cols-2 lg:grid-cols-4 gap-8'>
                         {[
-                            { name: 'Alexis Sommerville', role: 'Founder & Team Member'},
+                            { name: 'Alexis Sommerville', role: 'Founder & Team Member', image: 'images/Alexis.png'},
                             { name: 'Ella', role: 'Team Member', image: ''},
-                            { name: 'Lizzy', role: 'Team Member', image: ''},
-                            { name: 'Eunice', role: 'Team Member', image: ''}
+                            { name: 'Lizzy', role: 'Team Member', image: 'images/Lizzy.png'},
+                            { name: 'Eunice', role: 'Team Member', image: 'images/eunice-10.png'}
                         ].map((leader, index) => (
                             <div key={index} className='bg-white/70 backdrop-blur rounded-[2rem] overflow-hidden shadow-md hover:shadow-lg transition-shadow'>
                                 <img
