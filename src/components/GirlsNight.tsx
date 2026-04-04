@@ -1,4 +1,4 @@
-import { Calendar, Coffee, Heart, Users, Home } from 'lucide-react';
+import { Calendar, Coffee, Users, Home } from 'lucide-react';
 
 export function GirlsNight() {
     const upcomingEvents = [
